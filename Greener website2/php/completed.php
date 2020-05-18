@@ -32,7 +32,8 @@ exit(); }
 
 
 <body>
-
+    
+<!--- Navbar-->
   <ul>
   <li><a class= "active" href="challengehome.php">Home</a></li>
   <li><a href="settings.php">Settings</a></li>
@@ -56,9 +57,10 @@ exit(); }
 
       </div>
 
-      <div class="feature-box col-lg-4">
+    <div class="feature-box col-lg-4">
 
-        <button type="button" class="feature-title btn btn-lg btn-outline-light" onclick= "location.href = 'proposed.php'"> Proposed</button>
+        <button type="button" class="feature-title btn btn-lg btn-outline-light" onclick= "location.href = 'proposed.php'"> Proposed
+        </button>
 
       </div>
     </div>

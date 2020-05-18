@@ -33,7 +33,7 @@ session_start();
 
 <body>
 
-
+<!--Navbar-->
  <ul>
   <li><a href="challengehome.php">Home</a></li>
   <li><a href="settings.php">Settings</a></li>

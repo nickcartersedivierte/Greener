@@ -27,12 +27,12 @@ if (isset($_POST['reg_user'])) {
   }
 
   // checking DB to make sure the user doesnt exist already
-  
   $user_check= "SELECT * FROM user WHERE userName='$userName' OR email='$email' LIMIT 1";
   $result = mysqli_query($database, $user_check);
   $user = mysqli_fetch_assoc($result);
   
-  if ($user) { // if user exists
+// if user exists display message
+  if ($user) { 
     if ($user['userName'] === $userName) {
       array_push($errors, "Username already exists");
     }
@@ -42,7 +42,7 @@ if (isset($_POST['reg_user'])) {
     }
   }
 
-  //If there are no errors, regitser the user
+  //If there are no errors, register the user
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving 
 
@@ -68,6 +68,7 @@ if (isset($_POST['login_user'])) {
   $userName = mysqli_real_escape_string($database, $_POST['userName']);
   $password = mysqli_real_escape_string($database, $_POST['password']);
 
+
   if (empty($userName)) {
   	array_push($errors, "Username is required");
   }
@@ -77,11 +78,14 @@ if (isset($_POST['login_user'])) {
 
   if (count($errors) == 0) {
   	$password = md5($password);
+      
+     //checking that the username and password are correct 
   	$query = "SELECT * FROM user WHERE userName='$userName' AND password='$password'";
   	$results = mysqli_query($database, $query);
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['userName'] = $userName;
   	  $_SESSION['success'] = "";
+    //redirecting user
   	  header('location: challengehome.php');
   	}else {
   		array_push($errors, "Wrong username or password");

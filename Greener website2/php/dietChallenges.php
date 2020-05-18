@@ -30,7 +30,7 @@ exit(); }
 
 <body>
 
-
+<!--- Navbar-->
 <ul>
   <li><a href="challengehome.php">Home</a></li>
   <li><a href="settings.php">Settings</a></li>
@@ -44,6 +44,7 @@ exit(); }
         <h1>Diet Challenges</h1>
 </div>
 
+<!-- Front side of the flip card-->
 <div class= "left">
 <div class="card flip-card ">
     <div class="flip-card-inner">
@@ -52,7 +53,8 @@ exit(); }
     <h3>Go Vegan for a day!</h3>
     <p>Adopting a plant based diet, even a few days a week, can reduce our carbon emissions by half</p>
     </div>
-
+        
+<!-- back of the flip card with tips etc-->
     <div class="flip-card-back">
         <h1>Go Vegan for a day!</h1>
       <br/>
@@ -68,7 +70,7 @@ exit(); }
   </div>
 </div>
 
-
+<!-- Front side of the flip card-->
 <div class ="right">
 <div class="card flip-card">
     <div class="flip-card-inner">
@@ -76,8 +78,8 @@ exit(); }
     <img src ="../img/vegan.jpg" id ="cover" width="30%">
     <h3>Go dairy free!</h3>
     <p>The dairy industry emits just as many greenhouse gases as the meat industry!</p>
-
-     </div>
+    </div>
+<!-- Back of the card with tips, etc-->
     <div class="flip-card-back">
         <h1>Go dairy free!</h1>
       <p>Try replacing milk in your latte with any vegetal milk</p>
@@ -85,9 +87,7 @@ exit(); }
         <p>Tips for evidence: <br/>
            - Take a pic of yourself preparing your coffee with any vegetal milk<br/>
            - Take pictures of your vegan pizza or toastie
-
         </p>
-
      </div>
    </div>
   <button class="button" onclick="window.location.href = 'sendChallenge.php';">Go dairy free!</button>
@@ -96,10 +96,9 @@ exit(); }
 
 
 
-
-<a href="challengehome.php" class ="back">
-  <h3>Back To Categories</h3>
-</a>
+    <a href="challengehome.php" class ="back">
+    <h3>Back To Categories</h3>
+    </a>
 
 
 </body>

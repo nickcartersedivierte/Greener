@@ -27,11 +27,10 @@ exit(); }
 
 <!-- Font Awesome -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
-
-
-
+    
 <body>
+    
+<!-- Navbar-->
 <ul>
   <li><a href="challengehome.php">Home</a></li>
   <li><a href="settings.php">Settings</a></li>
@@ -55,17 +54,20 @@ exit(); }
           <div class='container-fluid'>
             <div class='feature-box '>
                 ";
+    //displaying the results in a table
     while($row = mysqli_fetch_assoc($query)){
           echo "<table>";
           echo "<tr>";
           echo  "<th>" . $row ['userName'], "</th>";
           echo "</tr>";
-         
+        
+        //if there is no profile pic display the placeholder
         if($row['pic']== ""){
             
             echo "<tr>";
             echo "<td> <img src = '../img/placeholder.png' width = '200' heigth = '200' alt ='default image'> </td> ";
             echo "</tr>";
+        //if the user has a profile pic display it
         }else{
             echo "<tr>";
             echo " <td> <img src = '../uploads/".$row['pic']."' width = '200' heigth = '200' alt ='profile image'> </td>";
@@ -80,14 +82,14 @@ exit(); }
           </section>";      
     ?>
     
-<!--   
+  
 <section class="colored-section" id="features">    <div class="row">
       <a href="challengehome.php" class ="back">
         <h3>Back To Categories</h3>
       </a>
     </div>
 </section>
--->
+
     
 </body>
 </html>

@@ -1,7 +1,10 @@
 <?php include('server.php') ?>
+<?php include('errors.php'); ?>
+
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
     <meta charset="utf-8">
     <title>Register</title>
 
@@ -19,27 +22,22 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-  </head>
+</head>
+    
   <body>
 
     <section class="colored-section" id="title">
-
-          <div class="container-fluid">
+        <div class="container-fluid">
 
             <!-- Nav Bar -->
 
             <nav class="navbar navbar-expand-lg navbar-dark">
-
-              <a class="navbar-brand" href="../index.html">#Greener</a>
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-
+            <a class="navbar-brand" href="../index.html">#Greener</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
                     <a class="nav-link" href="../index.html#features">About</a>
@@ -50,74 +48,68 @@
                   <li class="nav-item">
                     <a class="nav-link" href="../index.html#team">GreenTech</a>
                   </li>
-
                 </ul>
-
               </div>
             </nav>
 
 
-            <div class= "form container">
-              <div class="d-flex justify-content-center h-100">
-                  <div class="card">
-                    <div class="card-header">
-                      <h3>Register</h3>
-                    </div>
-
-                    <div class="card-body">
-
-                        <form method="post" action="register.php">
-                        	<?php include('errors.php'); ?>
-
-                          <div class="register">
-
-                          	<div class=" input-group form-group">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                              </div>
-                              <input type="text" class="form-control" placeholder="username" name="userName" required value="<?php echo $userName; ?>">
-                          	</div>
-
-                          	<div class="input-group form-group">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                              </div>
-                              <input type="email"  class="form-control" placeholder="email" name="email" required value="<?php echo $email; ?>">
-                          	</div>
-
-                        	<div class="input-group form-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input class="form-control" type="password" placeholder="password" required name="password_1">
-                        	</div>
-
-                        	<div class="input-group form-group">
-                            <div class="input-group-prepend">
-                        	     <span class="input-group-text"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input class="form-control" type="password" placeholder="confirm password" name="password_2" required>
-                        	</div>
-
-              	           <div class="input-group form-group">
-              	              <button type="submit" class="btn float-right login_btn" name="reg_user">Register</button>
-                            </div>
-
-                        </div>
-                      </form>
-                    </div>
-
-                    <div class="card-footer">
-              				<div class="d-flex justify-content-center links">
-              				      Already a member? <a href="login.php">Sign in</a>
-              				</div>
-              			</div>
-
-              </div>
+<!--Registration from section-->
+    <div class= "form container">
+        <div class="d-flex justify-content-center h-100">
+        <div class="card">
+            <div class="card-header">
+                <h3>Register</h3>
             </div>
-          </div>
+
+    <div class="card-body">
+        <form method="post" action="register.php">
+        <div class="register">
+          <div class=" input-group form-group">
+            <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="username" name="userName" required value="<?php echo $userName; ?>">
         </div>
-    </section>
+            <div class="input-group form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <!--email label-->
+            <input type="email"  class="form-control" placeholder="email" name="email" required value="<?php echo $email; ?>">
+            </div>
+            <!--password label-->
+            <div class="input-group form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input class="form-control" type="password" placeholder="password" required name="password_1">
+            </div>
+            <!--password confirmation label-->
+            <div class="input-group form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input class="form-control" type="password" placeholder="confirm password" name="password_2" required>
+            </div>
+            <!--creating the button-->
+          <div class="input-group form-group">
+            <button type="submit" class="btn float-right login_btn" name="reg_user">Register</button>
+         </div>
+
+    </div>
+    </form>
+ </div>
+            <!--Section to redirect to login-->
+    <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+            Already a member? <a href="login.php">Sign in</a>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+</section>
 
 
 </body>

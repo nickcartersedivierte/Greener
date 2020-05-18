@@ -41,16 +41,18 @@ else if (count($errors) == 0) {
 //Javascript to send confirmation or alert to user
 function alert($message) { 
       
-    // Display the alert box and redirect to settings.php  
+// Display the alert box and redirect to settings.php  
    echo "<script>
    
    alert('$message');
    location='login.php';
    </script>"; 
 }
+
+//Javascript for the warning message
 function msg($warning) { 
       
-    // Display the alert box and redirect to settings.php  
+// Display the alert box and redirect to settings.php  
    echo "<script>
    
    alert('$warning');

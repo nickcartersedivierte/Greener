@@ -28,6 +28,7 @@ exit(); }
 
 
 <body>
+<!-- Navbar-->
  <ul>
   <li><a href="challengehome.php">Home</a></li>
   <li><a href="settings.php">Settings</a></li>
@@ -40,7 +41,7 @@ exit(); }
         <h1>Energy Challenges</h1>
 </div>
 
-
+<!-- flip card for challenge - FRONT-->
 <div class ="left">
 <div class="card flip-card">
     <div class="flip-card-inner">
@@ -49,7 +50,7 @@ exit(); }
     <h3>Save Electricity</h3>
         <p>For one day avoid turning on heaters if possible, keep the use of lights and use appliances the bare minimum</p>
      </div>
-
+    <!-- back of the card with tips, etc-->
     <div class="flip-card-back">
         <h1>Save Electricity</h1>
      <p>
@@ -63,12 +64,13 @@ exit(); }
         </p>
      </div>
    </div>
+     <!--button to redirect user to page to choose who to send challenge to-->
     <button class="button" onclick="window.location.href = 'sendChallenge.php';">Go Save !</button>
   </div>
 </div>
 
 
-
+<!-- flip card for challenge - FRONT -->
 <div class ="right">
 <div class="card flip-card">
     <div class="flip-card-inner">
@@ -77,19 +79,17 @@ exit(); }
     <h3>Walk or cycle to Work/College</h3>
      <p>By implementing these options as your daily commute choice you will contribute to reducing CO2 emissions.</p>
      </div>
-
+<!-- back of the card with tips, etc-->
     <div class="flip-card-back">
         <h1>Walk or cycle to Work/College</h1>
 
        <p>Tips for evidence: <br/> <br/>
            - Take a pic of yourself walking or about to cycle to work or school <br/> <br/>
            - Record a short video of yourself commuting in this way (be mindful of traffic!)
-
         </p>
      </div>
    </div>
-    <button class="button" onclick="window.location.href = 'sendChallenge.php';">Go Commute !</button>
-
+  <button class="button" onclick="window.location.href = 'sendChallenge.php';">Go Commute !</button>
   </div>
 </div>
 
